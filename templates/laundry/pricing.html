@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+{% extends "laundry/index.html" %}   <!-- Django code  = Temlates inheritance -->
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing</title>
+</head>
+<body>
+    
+{% block body_block %}
+<div class="row">
+    <p class="price-promise">
+        We want to save your time and money too, keeping laundry services easy and simple.
+        So, you can enjoy doing things you love. We promise to make price affordable.
+    </p>
+</div>        
+
+<section class="section-pricing">
+    <div class="row">
+        <h1> Price for individual Washing and Dry cleaning </h1>
+    </div>
+    <div class="row">
+        <div class="col span-1-of-5">
+            <div class="filter-category">
+                <ul>
+                    <li onclick="chooseGentleman()"> Gentleman  </li>
+                    <li onclick="chooseLadies()"> Ladies  </li>
+                    <li onclick="chooseBabies()"> Babies </li>
+                    <li onclick="chooseUnisex()"> Unisex </a> </li>
+                    <li onclick="choosehome()"> Home Appliance </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col span-4-of-5">
+            <div class="price-list">
+                <div class="category-name">
+                    <p class="category"> ALL </p>
+                </div>
+
+                <div class="Gentleman">                  
+
+                    {% for items in item_details %}     <!--Django Code-->
+
+                    {% if items.Catogary  == 'Gentleman' %}
+                    <div class="item-list">                    
+                        <div class="col span-1-of-5">
+                            <ul>
+                                <li class="item-name"> {{ items.Item_name }} </li>      <!--Django Code-->
+                                <li> <span> Washing : </span> Rs. {{ items.Washing_price }} </li>       <!--Django Code-->
+                                <li> <span> Dry cleaning : </span> Rs. {{ items.Dryclean_price }} </li>     <!--Django Code-->
+                            </ul>
+                        </div>
+                    </div>                   
+
+                    {% endif %}
+                    {% endfor %}                      <!--Django Code-->
+                </div>
+
+                <div class="Ladies">                  
+
+                    {% for items in item_details %}     <!--Django Code-->
+
+                    {% if items.Catogary  == 'Ladies' %}
+                    <div class="item-list">                    
+                        <div class="col span-1-of-5">
+                            <ul>
+                                <li class="item-name"> {{ items.Item_name }} </li>      <!--Django Code-->
+                                <li> <span> Washing : </span> Rs. {{ items.Washing_price }} </li>       <!--Django Code-->
+                                <li> <span> Dry cleaning : </span> Rs. {{ items.Dryclean_price }} </li>     <!--Django Code-->
+                            </ul>
+                        </div>
+                    </div>                   
+
+                    {% endif %}
+                    {% endfor %}                      <!--Django Code-->
+                </div>
+
+                <div class="Babies">                  
+
+                    {% for items in item_details %}     <!--Django Code-->
+
+                    {% if items.Catogary  == 'Babies' %}
+                    <div class="item-list">                    
+                        <div class="col span-1-of-5">
+                            <ul>
+                                <li class="item-name"> {{ items.Item_name }} </li>      <!--Django Code-->
+                                <li> <span> Washing : </span> Rs. {{ items.Washing_price }} </li>       <!--Django Code-->
+                                <li> <span> Dry cleaning : </span> Rs. {{ items.Dryclean_price }} </li>     <!--Django Code-->
+                            </ul>
+                        </div>
+                    </div>                   
+
+                    {% endif %}
+                    {% endfor %}                      <!--Django Code-->
+                </div>
+
+                <div class="Unisex">                  
+
+                    {% for items in item_details %}     <!--Django Code-->
+
+                    {% if items.Catogary  == 'Unisex' %}
+                    <div class="item-list">                    
+                        <div class="col span-1-of-5">
+                            <ul>
+                                <li class="item-name"> {{ items.Item_name }} </li>      <!--Django Code-->
+                                <li> <span> Washing : </span> Rs. {{ items.Washing_price }} </li>       <!--Django Code-->
+                                <li> <span> Dry cleaning : </span> Rs. {{ items.Dryclean_price }} </li>     <!--Django Code-->
+                            </ul>
+                        </div>
+                    </div>                   
+
+                    {% endif %}
+                    {% endfor %}                      <!--Django Code-->
+                </div>
+
+                <div class="Home">                  
+
+                    {% for items in item_details %}     <!--Django Code-->
+
+                    {% if items.Catogary  == 'Home Appliance' %}
+                    <div class="item-list">                    
+                        <div class="col span-1-of-5">
+                            <ul>
+                                <li class="item-name"> {{ items.Item_name }} </li>      <!--Django Code-->
+                                <li> <span> Washing : </span> Rs. {{ items.Washing_price }} </li>       <!--Django Code-->
+                                <li> <span> Dry cleaning : </span> Rs. {{ items.Dryclean_price }} </li>     <!--Django Code-->
+                            </ul>
+                        </div>
+                    </div>                   
+
+                    {% endif %}
+                    {% endfor %}                      <!--Django Code-->
+                </div>
+
+            </div>  
+        </div>
+
+        
+    </div> 
+</section>
+    
+
+{% endblock %} 
+ 
+<script src=" {% static 'vendors/js/jquery.waypoints.min.js' %} "></script>
+<script src="{% static 'resources/js/script.js' %} "></script>
+
+</body>
+</html>    
+

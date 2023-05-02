@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+{% load static %}    
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'resources/css/learn.css'%} ">
+    <title>Home</title>
+</head>
+<body>
+    <ul style="list-style:none;float:right;">
+        <li> <a href="{% url 'learnPage' %} "> Learn </a> </li>
+        <li> <a href="{% url 'other' %} "> Other </a> </li>
+        <li> <a href="{% url 'userAuth' %} "> User Authentication </a> </li>
+
+        {% if user.is_authenticated %}
+        <li><a href="{% url 'userLogout' %} ">Logout</a></li>
+        {% else %}
+        <li> <a href="{% url 'userLogin' %} "> User Login </a> </li>
+        {% endif %}
+
+    </ul>
+    
+    
+    
+
+    <h1>welcome {{ SessionName }}</h1>
+
+{% block body_block %}
+
+<h1> Form from model person Example :-</h1>
+<form method="POST">
+    {{ ModelForm.as_p }}
+    {% csrf_token %}
+    <button type="submit">Sunmit From ModelForm</button>
+</form>
+
+<h1> List of users submitted by model form person :-</h1>
+
+{% if user_details %}
+    <ol>
+        {% for user in user_details %}
+        <li> User Info </li>
+            <ul>
+                <li>First Name :- {{ user.firstName }} </li>
+                <li> Last Name :-  {{ user.lastName }} </li>
+                <li> Email :-  {{ user.email }} </li>
+            </ul>
+        {% endfor %}
+   </ol>
+{% endif %}
+
+<h1> Form from model Example :-</h1>
+
+<form method="POST" >
+    {{ form.as_p }} 
+    {% csrf_token %}
+    <button type="submit">Submit</button>
+</form>
+
+<h1> Form from template Example :-</h1>
+<form action="{% url 'register' %}" method="POST">
+    {% csrf_token %}
+    <label for="">Username</label> <input type="text" name="Username"><br><br>
+    <label for="">Password</label><input type="text" name="Password"><br><br>
+    <label for="">Conform Password</label> <input type="text" name="CPassword"><br><br>
+    <input type="submit" value="Register">
+</form>
+
+<img src="{% static "img/logo.png" %} " alt="">
+
+{% endblock %}
+
+</body>
+</html>

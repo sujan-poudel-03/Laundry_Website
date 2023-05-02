@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+{% extends 'laundry/index.html' %}
+{% load static %}
+
+{% block body_block %}
+
+<section class="section-partation">
+    <div class="row">
+        <ul>
+            <li class="signin"><a href="#">Sign in</a></li>
+            <li class="signup"><a href="#">Sign up</a></li>
+        </ul>
+    </div>
+</section>
+
+<section class="section-signin">
+    <div class="row">
+        <h2>Sign in</h2>
+    </div>
+    <div class="row">
+        <div class="col span-1-of-2 signin-box">
+            <img src="{% static 'img/signin.png' %}" alt="Sign in">
+        </div>
+        
+        <form action="{% url 'signin' %}" method="POST">
+            {% csrf_token %}
+        <div class="col span-1-of-2">
+            <div class="row">
+             <p class='loginError'> {{message}} </p> 
+                <div class="col span-1-of-3">
+                    <label for="">Phone / Email</label>
+                </div>
+                <div class="col span-2-of-3">
+                    <input type="text" name='username' id='username' placeholder="Phone / Email">
+                    <span id='usernameError'>  </span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col span-1-of-3">
+                    <label for="">Password</label>
+                </div>
+                <div class="col span-2-of-3">
+                    <input type="text" name='password' id='password' placeholder="Password">
+                    <span id='passwordError'>  </span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col span-1-of-3">  </div>
+                <div class="col span-2-of-3">
+                    <a href="#">Forgot Password?</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col span-1-of-3">  </div>
+                <div class="col span-2-of-3">
+                    <input type="checkbox" name="remember" value="checked"> Remember me    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col span-1-of-3">  </div>
+                <div class="col span-2-of-3">
+                    <button type="submit" id="signin" class="btn btn-primary">Sign in</button>
+                </div>
+            </div>
+        </div>
+        </form>    
+        
+    </div>
+</section>
+
+
+    <section class="section-signup">
+        <div class="row">
+            <h2>Sign up</h2>
+        </div>
+    
+        <div class="row">
+            <div class="col span-2-of-4 signup-box">
+                <img src="{% static 'img/signup.png' %}" alt="Signun">
+            </div>
+            
+            <form action="{% url 'signup' %}" method="POST">
+                {% csrf_token %}
+                <div class="col span-1-of-4">
+                    <input type="text" name="firstname" class="signup" placeholder="First Name">
+                </div>
+                <div class="col span-1-of-4">
+                    <input type="text" name="lastname" class="signup" placeholder="Last Name">
+                </div>
+                <div class="col span-2-of-4">
+                    <input type="text" name="address" class="signup" placeholder="Address">
+                </div>
+                <div class="col span-2-of-4">
+                    <select name="subscription">
+                        <option value="" disabled selected hidden>Subscription Package</option>
+                        <option value="Silver" style="color: silver;">Silver ( 1 month Package )</option>
+                        <option value="Gold" style="color: gold;">Gold ( 6 month Package )</option>
+                        <option value="Diamond" style="color: #337e8f;">Diamond ( 12 month Package )</option>
+                    </select>
+                </div>
+                <div class="col span-2-of-4">
+                    <input type="text" name="phone" placeholder="Phone Number">
+                </div>
+                <div class="col span-2-of-4">
+                    <input type="email" name="email" placeholder="Email">
+                </div>
+                <div class="col span-2-of-4">
+                    <input type="text" name="password" placeholder="Password">
+                </div>
+                <div class="col span-2-of-4">
+                    <input type="text" name="conformpassword" placeholder="Conform Password">
+                </div>
+                <div class="col span-2-of-4">
+                    <p>
+                        By clicking Sign Up, you agree to our <a href="#">Terms & condition</a>,
+                        <a href="#">Privacy & Policy </a>, <a href="#">Refund Policy</a>,
+                        <a href="#"> Data Policy </a> and <a href="#">Cookies Policy</a> .
+                        You may receive SMS Notifications from us and
+                        can opt out any time. 
+                    </p>
+                </div>
+                <div class="col span-2-of-4">
+                    <button type="submit" class="btn btn-primary" id="signupButton" >Sign up</button>
+                </div>
+    
+            </form> 
+
+        </div>
+    </section>
+
+{% endblock %}

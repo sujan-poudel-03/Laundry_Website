@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Font Awesome CDN ( Content Delivery Network )-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        div{
+            margin-top: 25px;
+        }
+        button{
+            margin-top: 0px;
+        }
+    </style>
+    <title>CRUD</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2 class="">Fill up Form</h2>
+        <form action="{% url 'crud' %}" method="POST">
+            {% csrf_token %}
+            <table class="table">
+                <tr>
+                    <td><label for="">Student ID</label></td>
+                    <td><input type="text" name="sId" placeholder="Student ID"> </td>
+                </tr>  
+                <tr>
+                    <td><label for="">Student Name</label></td>
+                    <td><input type="text" name="sName" placeholder="Your Name" id=""></td>
+                </tr>
+                <tr>
+                    <td><label for="">Phone</label></td>
+                    <td><input type="text" name="sPhone" placeholder="Phone Number"></td>
+                </tr>
+                <tr>
+                    <td><label for="">Birthday</label></td>
+                    <td><input type="date" name="birthdate" id=""></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button type="submit" class="btn-primary">Submit</button></td>
+                </tr>
+              </table>
+        </form>
+
+        {% if Student %}
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Student ID</th>
+                    <th>Student Name</th>
+                    <th>Student Phone</th>
+                    <th>Birthday</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+        {% for student in Student %}
+                <tr>
+                    <td id='studentID'>{{student.StudentId}}</td>
+                    <td id='studentName'> {{student.StudentName}}</td>
+                    <td id='studentPhone'>{{student.StudentPhone}}</td>
+                    <td id='Birthday'>{{student.Birthday}}</td>
+                    <td> <a href="#" class="pasValue" data-toggle="modal" data-target="#exampleModalCenter"><ion-icon name="pencil"></ion-icon></a><a href="#" data-toggle="modal" data-target="#exampleModalCenter" style="margin-left: 10px;"><ion-icon name="trash-outline"></ion-icon></a> </td>
+                </tr>
+        {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+            <h4 class="text-center"> No records found </h4>
+        {% endif %}
+    
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle"> Edit </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <form action="{% url 'edit' %}" method="POST">
+                        {% csrf_token %}
+                        <table class="table table-borderless">
+                            <tr>
+                                <td><label for="">Student ID</label></td>
+                                <td><input type="text" name="sId" id="id"> </td>
+                            </tr>  
+                            <tr>
+                                <td><label for="">Student Name</label></td>
+                                <td><input type="text" name="sName" id="name"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="">Phone</label></td>
+                                <td><input type="text" name="sPhone" id="phone"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="">Birthday</label></td>
+                                <td><input type="date" name="birthdate" id="birthday"></td>
+                            </tr>
+                          </table>
+            
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save changes</button>
+                        </div>
+            </form>
+
+            </div>
+            </div>
+        </div>
+    
+    </div>
+
+    <script>
+        document.querySelector('.pasValue').addEventListener('click', function(){
+            referID = document.querySelector('#studentID').innerHTML;
+            referName = document.querySelector('#studentName').innerHTML;
+            referPhone = document.querySelector('#studentPhone').innerHTML;
+            referBirthday = document.querySelector('#Birthday').innerHTML;
+
+            console.log('ID :' +referID);
+            console.log('Name :' +referName);
+            console.log('Phone :' +referPhone);
+            console.log('Birthday :' +referBirthday);
+
+            document.getElementById('id').value = referID
+            document.getElementById('name').value = referName
+            document.getElementById('phone').value = referPhone
+            document.getElementById('birthday').value = referBirthday
+        })
+        
+    </script>
+</body>
+</html>

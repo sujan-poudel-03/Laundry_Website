@@ -1,0 +1,335 @@
+/*-- Big tablet to 1200px : widths smaller than 1140px i.e pixel row in our project  ---*/
+/* -- It works between 1024px to 1200px -- */
+
+@media only screen and (max-width: 1200px){
+
+    .row{ 
+        padding: 0.2%;
+    }
+
+    .head-text {
+        width: 100%;
+    }
+}
+
+/*-- For small tablet to big tablets: from 767px  to 1023px ---*/
+
+@media only screen and (max-width: 1023px){
+    body{
+        font-size: 15px;
+    }
+    section{
+        padding: 50px 0;
+    }
+
+    h1,h2,h3 {
+        font-weight: 200;
+    }
+    h1 { font-size: 200%; }
+    h2 { font-size: 170%; }
+    h3 { font-size: 140%; } 
+
+    .row {
+        max-width: 745px;
+    }
+
+    .logo {
+        height: 70px;
+    }
+
+    .main-nav {
+        margin-top: 50px;
+        font-size: 85%;
+        letter-spacing: 1px;
+    }
+
+    .main-nav li {
+        padding: 0 10px;
+        font-weight: 500;
+    }
+
+    .head-text {
+        font-style: bold;
+    }
+
+    
+    .section-steps img{
+        height: 90px;
+        padding-left: 10%;
+    }
+
+    .section-steps .steps {
+        margin-left: 25%;
+        margin-top: 5px;
+    }
+
+    .section-steps li {
+        font-size: 92%;
+    }
+    
+    .section-services .plan-price {
+        font-size: 200%;
+    }
+
+    .section-services .plan-duration {
+        font-size: 100%;
+    }
+
+    .section-services li {
+        font-size: 120%;
+    }
+
+    .section-services .btn-register {
+        font-size: 120%;
+        margin-left: 20%
+    }
+
+    .service-detail .msg-discount{
+        font-size: 95%;
+    }
+
+    .section-services p {
+        margin-left: 5%;
+    }
+
+    .section-features  {
+        position: relative;     /* line used to center content in vertical line */
+    }
+
+    .section-features span {
+        font-size: 109%;
+        line-height: 125%;
+        font-weight: bold;
+    }
+
+    .section-features ion-icon {
+        position: absolute;   /* line used to center content in vertical line */
+        top: -12%;               /* line used to center content in vertical line */
+        transform: translate(-50%);     /* line used to center content in vertical line */
+    }
+
+    .section-app .mobile-logo {
+        height: auto;
+    }
+
+    .section-app .app-logo {
+        padding-left: 10%;
+    }
+
+    .section-app p {
+        font-size: 160%;
+    }
+
+    .section-app .app-link {
+        width: auto;
+        height: 40px;
+    }
+
+    .icon {
+        font-size: 400%;
+    }
+
+    .achievement p {
+        font-size: 200%;
+    }
+
+    .reviews blockquote {
+        height: auto;
+        font-size: 110%;
+        padding: 2px 5px;
+        line-height: 145%;
+    }
+
+    .person-detail img {
+        margin-top: -10px;
+        width: 23%;
+    }
+
+    .section-contact {
+        font-size: 105%;
+    }
+
+    footer {
+        font-size: 85%;
+    }
+
+    .social-links {
+        font-size: 90%;
+    }
+
+}
+
+/*-- For small phones to small tablets: from 481px  to 767px ---*/
+
+@media only screen and (max-width: 767px){
+
+    body{ font-size: 13px; }
+    section { padding: 30px 0; }
+    .row { max-width: 430px }
+
+
+    .col { 
+        width: 100%;
+        margin: 0 0 4% 0;
+     }
+
+    .main-nav { display: none; }
+
+/* --Mobile Nav --- */
+    .mobile-nav-icon {
+        display: inline-block;
+    }
+
+    .main-nav {
+        float: left;
+        margin-top: 35px;
+        margin-left: 25px;
+    }
+
+    .main-nav li {
+        display: block;
+    }
+
+    .main-nav li a:link ,
+    .main-nav li a:visited {
+        display: block;
+        border: 0;
+        padding: 5px;
+        font-size: 100% ;
+    }
+
+    /* --sticky -- */
+
+    .sticky .logo { display: none; }
+
+    .sticky .sticky-logo {
+        display: block;
+        margin-top: 0;
+    }
+
+    .sticky .main-nav {
+        margin-top: 10px;
+    }
+
+    .mobile-nav-icon ion-icon { color: #555; }
+
+    .sticky .main-nav li a:link,
+    .sticky .main-nav li a:visited {
+        padding: 10px 0;
+    }
+
+    h1 { font-size: 180% ; }
+    h2 { font-size: 150%; }
+    h3 { font-size: 130% }
+
+     .logo {
+         height: 70px;
+     }
+
+    .head-text {
+        font-size: 150%;
+        width: 100%;
+    }
+    
+    .section-steps .box {
+        margin-left: 15%;
+        width: 70%;
+        height: 250px;
+    }
+
+    .section-steps img {
+        margin-left: 20%;
+        border-radius: 50%;
+        width: 50%;
+    }
+
+    .section-steps .steps {
+        margin-left: 40%;
+        font-size: 150%;
+        font-weight: 800;
+    }
+
+    .section-steps h3 {
+        font-size: 140%;
+    }
+
+    .section-steps li {
+        padding-top: 5px;
+        font-size: 120%;
+    }
+
+    .section-services .box {
+        height: 400px;
+    }
+
+    .section-services li:last-child {
+        padding-bottom: 25px;
+    }
+
+    .section-services .btn-register {
+        margin-left: 35%;
+    }
+
+    .section-features {
+        font-size: 130%;
+    }
+
+    .section-app .mobile-logo {
+        width: 90%;
+        padding-bottom: 0;
+        height: auto;
+    }
+
+    .section-app p {
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+
+    .icon {
+        font-size: 300%;
+    }
+
+    .section-achievement {
+        height: 500px;
+    }
+
+    .section-achievement p {
+        font-size: 180%;
+    }
+    
+    .customer-response {
+        margin-left: 0;
+        height: auto;
+    }
+
+    .reviews blockquote {
+        line-height: 145%;
+        font-size: 120%;
+        border-radius: 30px 10px 30px 10px;
+    }
+
+    .section-contact {
+        font-size: 130%;
+    }
+
+    .footer-nav {
+        margin-bottom: 10px;        
+    }
+
+    .social-links {
+        float: left;
+    }
+
+    /* Pricing */
+    .item-list .col {
+        width: 50%;
+    }
+}
+
+/*-- For small phones : from 0 to 480px ---*/
+
+@media only screen and (max-width:480){
+
+
+
+} 

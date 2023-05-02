@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+{% extends 'laundry/index.html' %}
+{% load static %}
+
+{% block body_block %}
+
+    <div class="page-head">
+        <div class="row">
+            <h1> Who are we</h1>
+            <p>
+                We are the team of passionate people who believe in the role technology
+                can play to make our everyday life easier. We are young people mostly from 
+                product and operations background. At service laundry we want to redefine how
+                people use local services and use technology to provide them best experience
+                with our promise of convenience, Quality and Price.
+            </p>
+        </div>
+    </div>
+
+    <section class="section-aboutus">
+        <div class="row">
+            <h2>What we do </h2>
+        </div>
+        <div class="row">
+            <div class="col span-1-of-5 box">
+                <ul>
+                    <li> <img src="{% static 'img/pickup_icon.jpg' %} " alt="Pickup"> </li>
+                    <li id="wedo"> Pick up </li>
+                </ul>
+            </div>
+            <div class="col span-1-of-5 box">
+                <ul>
+                    <li> <img src="{% static 'img/washing.jfif' %}" alt="Wash"> </li>
+                    <li id="wedo"> Wash </li>
+                </ul>
+            </div>
+            <div class="col span-1-of-5 box">
+                <ul>
+                    <li> <img src="{% static 'img/dry.jpg' %}" alt="Dry"> </li>
+                    <li id="wedo"> Dry </li>
+                </ul>
+            </div>
+            <div class="col span-1-of-5 box">
+                <ul>
+                    <li> <img src="{% static 'img/fold.jpg' %}" alt="Iron and Fold"> </li>
+                    <li id="wedo"> Iron and Fold </li>
+                </ul>
+            </div>
+            <div class="col span-1-of-5 box">
+                <ul>
+                    <li> <img src="{% static 'img/delivery.jpg' %}" alt="Delivery"> </li>
+                    <li id="wedo"> Delivery </li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+
+{% endblock %}

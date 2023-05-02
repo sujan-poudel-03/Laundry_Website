@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+{% extends 'laundry/index.html' %}
+
+{% block body_block %}
+
+<div class="page-head">
+    <div class="row">
+        <h1>We'd love to hear from you</h1>
+        <p>
+            Whether you have a question on price, services, team, pick up, delivery or an appreciation message towards us
+            feel free to send us. Our team is ready to answer your question and resolve our weakness.
+        </p>
+    </div>
+</div>
+
+    <section class="section-contactus">
+        <div class="row">
+            <div class="col span-1-of-3">
+                <h3> Contact </h3>
+                <ul class="contact">
+                    <li>For more details contact :</li>
+                    <li><ion-icon name="call"></ion-icon> 9866575320, 9807476338</li>
+                    <li><ion-icon name="mail"></ion-icon> poudelsujan03@gmail.com</li>
+                    <li><ion-icon name="time"></ion-icon> 8 A.M - 6 P.M </li>
+                </ul>
+            </div>
+
+            <div class="col span-2-of-3 box">
+                <h3 class="center"> Get in touch with us </h3>
+                <div class="row">
+                    <div class="col span-1-of-2 input-container">
+                        <input type="text" name="firstname" class="firstname" placeholder="First Name">
+                    </div>
+                    <div class="col span-1-of-2">
+                        <input type="text" name="lastname" class="lastname" placeholder="Last Name">
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col span-2-of-3 input-container">
+                        <input type="text" name="phonenumber" class="fullinput" placeholder="Phone Number" required>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col span-2-of-3 input-container">
+                        <input type="email" name="email" placeholder="Email" >
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col span-2-of-3">
+                        <select name="find us" id="" required>
+                            <option value="" disabled selected hidden>How did you find us?</option>
+                            <option value="Friends">Friends</option>
+                            <option value="Social Media">Social Media</option>
+                            <option value="Advertisement">Advertisement </option>
+                            <option value="Suggestion">Others</option>
+                        </select>
+                    </div>
+                </div>   
+                <div class="row">
+                    <div class="col span-2-of-3">
+                        <select name="querytype" id="" required>
+                            <option value="" disabled selected hidden>Message about</option>
+                            <option value="Appreciation">Appreciation</option>
+                            <option value="Service Time">Service Time</option>
+                            <option value="Delivery">Delivery</option>
+                            <option value="Pick Up">Pick Up</option>
+                            <option value="Price">Price</option>
+                            <option value="Detergent">Detergent</option>
+                            <option value="Suggestion">Others</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col span-2-of-3 ">
+                        <textarea name="message" id="" cols="30" rows="10" placeholder="Your message"></textarea>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col span-2-of-3">
+                        <button type="submit" class="btn btn-primary" >Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+{% endblock %}

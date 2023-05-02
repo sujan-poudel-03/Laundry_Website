@@ -1,0 +1,1085 @@
+    @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+    /* #f18904 */
+
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: lato Arial, Helvetica, sans-serif;
+        box-sizing: border-box;
+    }
+
+    html{
+        font-size: 10px;
+        font-weight: 300;
+    }
+
+    .row{
+        max-width: 1140px;
+        margin: 0 auto;
+        padding-bottom: 20px;
+    }
+
+    h1,h2,h3 {
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+
+    h1 {
+        margin : 0 ;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        letter-spacing: 1px;
+        word-spacing: 4px; 
+        font-size: 240%;
+        text-align: center;
+    }
+
+    h2{
+        text-align: center;
+        font-size: 200%;
+        margin-top: 20px;
+        margin-bottom: 8px;
+    }
+
+    h3 {
+        font-size: 160%;
+    }
+
+    h4 {
+        font-size: 120%;
+    }
+
+    h2:after {
+        display: block;
+        height: 2px;
+        background-color: rgb(226, 160, 36);
+        content : "    " ;
+        width: 100px;
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+    a{
+        text-decoration: none;
+    }
+
+    .box {
+        padding: 1px;
+    }
+
+    header{ 
+        height: 100vh;
+        background-image: linear-gradient(rgba(8, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(../../img/first.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    nav{
+        background-color: rgb(193, 193, 214);
+    }
+
+    .logo {
+        height: 100px;
+        width: auto;
+        float: left;
+        margin-top: 5px;
+    }
+
+    .sticky-logo {
+        height: 50px;
+        width: auto;
+        float: left;
+    }
+
+    .main-nav{
+        list-style: none;
+        float: left;
+        margin-top: 50px;
+    }
+
+    .main-nav li {
+        padding: 0 20px;
+        letter-spacing: 3px;
+        font-size: 125%;
+        color: rgb(187, 87, 87);
+        display: inline-block;
+    }
+
+    .sticky-logo {
+        display: none;
+    }
+ 
+    .main-nav li a:link,
+    .main-nav li a:visited {
+        padding: 8px 0;
+        color: rgb(238, 236, 236);
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 90%;
+        border-bottom: 2px solid rgb(11, 136, 194) transparent;   /* --- This makes line below nav ----*/
+        transition: border-bottom 0.2s;
+    }
+
+    .main-nav li a:active,
+    .main-nav li a:hover {
+        border-bottom: 2px solid rgb(65, 83, 92) ;
+    }
+
+    .client-profile {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .client-section {
+        font-size: 80%;
+        word-spacing: 5px;
+        text-transform: capitalize;
+    }
+
+      .client-panels {
+        display: none;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;    
+    }
+    .dropdown:hover{
+        border-bottom: none ;
+    }
+    
+    .dropdown img {
+        width :30px;
+        height: 30px;
+        border-radius: 80%;
+    }
+
+    .dropdown-content {
+      margin-left: 15% ;
+      font-size: 90%;
+      display: none;
+      position: absolute;
+      background-color: rgb(84, 84, 126);
+      color: #000;
+      min-width: 150px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    
+    .dropdown-content li {
+        padding: 5px 16px;
+    }
+    .dropdown-content li:hover{
+        border-bottom: none ;
+
+    }
+
+    .dropdown-content li:hover{
+        background-color: blueviolet;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+
+        /* -------------------------------- */
+    /* -- STICKY NAVBAR --*/
+    /*---------------------------------*/
+    .sticky {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        box-shadow: 0 2px 2px rgb(175, 116, 116);
+        z-index: 999;
+    }
+
+    .sticky .logo { display: none; }
+
+    .sticky .sticky-logo {
+        display: block;
+        margin-top: 0;
+    }
+
+    .sticky .main-nav {
+        margin-top: 15px;
+    }
+
+    .sticky .main-nav li a:link,
+    .sticky .main-nav li a:visited {
+        padding: 5px 0;
+        color: #555;
+    }
+
+    /* ------MOBILE-NAVIGATION--------------*/
+
+    .mobile-nav-icon {
+        float: right;
+        margin-top: 30px;
+        cursor: pointer;
+        display: none;
+    }
+
+    .mobile-nav-icon .cross-icon {
+        display: none;
+    }
+
+    .mobile-nav-icon ion-icon {
+        font-size: 250%;
+        color: #fff;
+    }
+
+    /* ------NEXT --------------*/
+
+    .head-text {
+        font-family: serif;
+        color:white;
+        width: 1140px;
+        top: 50% ;
+        left: 50% ;
+        font-weight: bold;
+        position: absolute;
+        transform: translate(-50% , -50%);
+    }
+
+    .head-text h1 {
+        padding-bottom: 20px;
+    }
+
+    .head-text a:link,
+    .head-text a:visited{
+        line-height: 145%;
+        font-size: 130%;
+        margin: 10px 30%;
+        padding: 10px 5%;
+        text-decoration: none;
+        border: #69697c 1px solid;
+        border-radius: 10px;
+        background-color: #d88220;
+        color: #747474fa;
+    }
+
+    .head-text a:hover,
+    .head-text a:active{
+        transition: background-color 1s , color 0.5s ;
+        background-color: #f8a306;
+        color: #705d5dfa;
+        font-size: 130%;
+    }
+
+    /*---------------------*/
+    /* --- HOW IT WORKS --- */
+    /*---------------------*/
+
+    .section-steps  {
+        background-color:#fcf7f7;
+    }
+
+    .section-steps .box {
+        background-color: #e5e4e2;
+        box-shadow: 5px 4px 2px #d36e6e;    /*---  x-axis offset, y-axis offset ,blur ,color ---*/ 
+        border-radius: 10px;
+        padding: 15px;
+        height: 350px;
+    }
+
+    .section-steps img {
+        width: 100%;
+        height: 120px;
+        border-radius: 80%;
+    }
+
+    .section-steps .steps {
+        margin-left: 33%;
+        width: 50px;
+        font-size: 130%;
+        font-weight: bold;
+        color: #a074c9;
+        text-align: center;
+        border: 1px solid #770add;
+        border-radius: 50%;
+    }
+
+    .section-steps h3 {
+        color: #3e0375;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .section-steps li {
+        padding-top: 15px;
+        list-style-type: none;
+        font-size: 110% ;
+        color: #2f2fa2;
+    }
+
+    /*---------------------------------*/
+    /*---SERVICE PLAN---*/
+    /*---------------------------------*/
+
+    .section-services {
+        background-color: rgba(238, 234, 241, 0.452);
+    }
+
+    .section-services h4 {
+        text-transform: uppercase;
+        padding-top: 20px;
+        font-size: 150%;
+    }
+
+    .section-services .silver{
+        color: silver;
+    }
+    .section-services .gold{
+        color: gold;
+    }
+    .section-services .diamond{
+        color: #337e8f;
+    }
+
+    .section-services .box {
+        border: 1px solid gray;
+        background-color: rgb(253, 253, 255);
+        box-shadow: 5px 10px 5px rgb(49, 49, 49);
+        height: 520px;
+    }
+
+    .section-services h4 {
+        text-align: center;
+        font-weight: 800;
+        color: #232396c9;
+    }
+
+    .section-services .plan-price {
+        padding-left: 2%;
+        font-size: 300%;
+        color: #b40c0c;
+        letter-spacing: 2px;
+    }
+
+    .section-services .plan-duration {
+        font-size: 120%;
+        font-weight: 300;
+        padding-left: 3%;
+        color: rgb(141, 50, 50);
+    }
+
+    .section-services ul {
+        list-style-type: none;
+    }
+
+    .section-services li {
+        font-size: 150%;
+        font-weight: bold;
+        line-height: 145%;
+        margin-left: 5%;
+        padding-top: 10px;
+        color: rgb(194, 166, 11);
+    }
+    
+    .icon-small {
+        font-size: 250%;
+        color: #21a01d;
+        padding-right: 3%;
+    }
+
+/* ------------------------------- */
+/* ------- Button --------------- */
+/* ----------------------------- */
+
+    .btn:link ,
+    .btn:visited {
+        display: inline-block;
+        text-decoration: none;
+        font-size: 120%;
+        background-color: rgb(153, 160, 202);
+        padding: 5px 25px;
+        border: 1px solid rgb(104, 103, 103);
+        box-shadow: 2px 2px 5px rgb(43, 42, 42);
+        border-radius: 20px;
+        font-weight: bold;
+        transition: background-color 0.2s , border 2s , color 1s ;
+    }
+
+    .btn-register {
+        margin-left: 33.33%;
+    }
+
+    .btn-register:link ,
+    .btn-register:visited {
+        font-size: 150%;
+        background-color: #4515f1b4;
+        color: #fff;
+    }
+
+    .btn-register:hover ,
+    .btn-register:active {
+        background-color: #cf6d17;
+        text-decoration: none;
+    }
+
+    /*---------------------------------*/
+    /*---Service Detail---*/
+    /*---------------------------------*/
+
+ 
+    .service-detail .box {
+        height: 400px;
+    }
+    
+    .service-detail .msg-discount {
+        font-size: 100%;
+        color: rgb(209, 80, 80);
+        padding-left: 5%;
+    }
+
+    .msg-discount span {
+        font-style: italic;
+        font-size: 110%;
+    }
+
+    .service-detail .btn-lg {
+        margin-left: 33%;
+        margin-top: 15px;
+    }
+
+    
+    /*---------------------------------*/
+    /*---FEATURES---*/
+    /*---------------------------------*/
+
+    .section-features {
+        background-color: rgba(232, 227, 236, 0.452);
+    }
+
+    .section-features p {
+        position: relative;         /* line used to center content in vertical line */
+        padding-left: 5%;
+    }
+
+    .section-features span {
+        font-size: 200%;
+        padding: 2px 20px;
+        color: #242582;
+        line-height: 135%;
+        display: inline-block;
+        text-transform: capitalize;
+    }
+
+    .section-features ion-icon {
+        color: #8194a7;
+        font-size: 180%;
+        position: absolute;   /* line used to center content in vertical line */
+        top: 18%;               /* line used to center content in vertical line */
+        transform: translate(-90%);     /* line used to center content in vertical line */
+    }
+
+    /*----------------------------*/
+    /*---ACHIEVEMENTS---*/
+    /*----------------------------*/
+
+    .section-achievement {
+        width: 100%;
+        height: 300px;
+    }
+
+    .icon{
+        margin-top: 25px;
+        font-size: 600%;
+        color: #27101b;
+    }
+
+    .achievement{
+        padding-left: 2%;
+        text-align: center;
+    }
+
+    .achievement p {
+        font-size: 230%;
+        color:#3133b8 ;
+    }
+
+
+    /* ---------------------------- */
+    /* ----SECTION_APP--- */
+    /* ---------------------------- */
+
+    .section-app {
+        background-color: ivory;
+    }
+
+    .section-app p {
+        font-size: 180%;
+        margin-top: 120px;
+        margin-bottom: 50px;
+        color:#585ab8; 
+
+    }
+
+    .section-app .mobile-logo {
+        padding-left: 30%;
+    }
+
+    .section-app .app-link {
+        display: inline-block;
+        width: auto;
+        height: 60px;
+    }
+
+    /* --------------------------------- */
+    /* ----CUSTOMER---- */
+    /* --------------------------------- */
+
+    .section-customer {
+        background-color: #b1afac25;
+   }
+
+    .section-customer h3 {
+        padding-top: 10px;
+        padding-right: 15px;
+        padding-bottom: 10px;
+        text-align: center;
+        border-bottom: rgb(127, 160, 158) 1px solid;
+        width: auto;
+        color: #0f419e8e;
+    }
+
+    .image-container {
+        width: 100%;
+        height: 430px;
+        overflow: hidden;
+        z-index: -1;
+        box-shadow: 5px 5px 2px gray;
+        border: 1px solid rgb(168, 160, 160) ;
+    }
+
+/* --------REVIEW ------------------- */
+
+    .customer-response {
+        margin-left: 10%;
+        box-shadow: 5px 5px 2px gray;
+        border: 1px solid rgb(168, 160, 160) ;
+        height: 430px;
+        z-index: -1;
+    }
+
+
+    .reviews blockquote{
+        background-color: #353436;
+        margin-left: 10%;
+        height: 200px;
+        border: gray 2px solid;
+        margin-top: 10px;
+        padding: 0 5%;
+        font-size: 130%;
+        cursor: text;
+        color: #fff;
+        font-weight: bold;
+        padding : 15px 20px ;
+        border-radius: 50px 20px 50px 20px;
+    }
+
+    .person-detail img {
+        margin-left: 0;
+        margin-top: -20px;
+        width: 20%;
+        height: 70px;
+        border-radius: 50%;
+        vertical-align: middle;
+    }
+
+    .person-detail {
+        margin-top: -10px;
+        font-size: 150%;
+        text-transform: capitalize;
+        color: rgb(63, 52, 52);
+        position: relative;
+        top: 2% ;
+        padding-left: 2%;
+        font-weight: bold;
+    }
+
+    .mail .mail-icon {
+        padding-left: 15%;
+        padding-right: 1%;
+        position: relative;
+        top: -10px;
+        left: 8%;
+    }
+
+    .mail span {
+        text-transform: none;
+        font-size: 60%;
+        position: relative;
+        top: -15px;
+        left: 7%;
+    }
+
+
+/* ------------------------- */
+/* ---SECTION CONTACT--- */
+/* ------------------------- */
+
+.section-contact {
+    font-size: 120%;
+    width: 60%;
+    margin: 0 auto;
+}
+
+* {
+    outline: none;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea {
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    height: 100px;
+}
+
+input[type=checkbox]{
+    margin: 10px 5px 10px 0;
+}
+
+.btn-submit {
+    padding-left: 33%;
+    margin-bottom: 50px;
+}
+
+/*---------------------*/
+/*--FOOTER--*/
+/*---------------------*/
+
+footer{
+    background-color: #333;
+    padding: 60px;
+    font-size: 90%;
+}
+
+.footer-nav{
+    list-style: none;
+    float: left;
+}
+
+.social-links {
+    list-style: none;
+    float: right;
+}
+
+.footer-nav li,
+.social-links li{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-nav li:last-child,
+.social-links li:last-child{
+    margin-right: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited{
+    text-decoration: none;
+    border: 0;
+    color: #9b9999;
+    transition: color 0.2s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active{
+    color: #ddd;
+}
+
+.social-links li a:link,
+.social-links li a:visited{
+    font-size: 150%;
+}
+
+/*--- Without this section size of social media icon will not increase while hover on it -- */
+
+.social-links ion-icon:hover,           
+.social-links ion-icon:active{
+    transform: scale(1.75);    
+}
+
+.facebook,
+.twitter,
+.google,
+.instagram{
+    transition: color 0.5s;
+}
+
+.facebook:hover{
+    color: #3b5998;
+}
+
+.twitter:hover{
+    color:  #55acee;
+}
+
+.google:hover{
+    color: #dd4b39;
+}
+
+.instagram:hover{
+    color: #e95950;
+}
+
+footer p{
+    text-align: center;
+    margin-top: 20px;
+    color: #555;
+}
+
+
+/*----------------------------------*/
+/*---------------PRICING-----------------*/
+/*----------------------------------*/
+
+.section-pricing  h1{
+    margin-top: 20px;
+    font-size: 180%;
+}
+
+.price-promise{
+    margin-top: 20px;
+    font-size: 180%;
+    background-color: rgb(38, 62, 75);
+    color: rgb(238, 164, 5);
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 2px gray;
+}
+
+.filter-category {
+    padding: 5px ;
+}
+
+.filter-category li:hover {
+    background-color: #95919e;
+}
+
+.filter-category li:hover {
+    color: snow;
+}
+
+.filter-category ul {
+    cursor: pointer;
+    list-style: none;
+}
+
+.filter-category li {
+    font-size: 150%;
+    font-weight: bold;
+    padding: 5px 8px;
+}
+
+.category-name p{
+    font-size: 160%;
+    font-weight: bold;
+    padding: 1% 10px;
+    margin-bottom: 5px;
+    border-left: 5px solid #117e40;
+}
+
+.item-list {
+    margin: 5px;
+    padding: 0%;
+}
+
+.item-list ul {
+    list-style: none;
+    height: 100px;
+    padding: 3px 0;
+}
+
+.item-list .item-name {
+    font-size: 130%;
+    color: #f18a04;
+}
+
+.item-list .item-name:after {
+    display: block;
+    height: 1px;
+    background-color: rgb(126, 81, 3);
+    content : "    " ;
+    width: 100px;
+    margin-top: 5px;
+}
+
+.item-list li {
+    font-size: 95%;
+    font-weight: 500;
+    color: #23caca;
+    padding: 5px 8%;
+}
+
+
+/* ------BRANCHES ---------- */
+
+.section-branches {
+    background-color: rgb(235, 235, 238);
+}
+
+.branch-details li {
+    list-style: none;
+}
+
+.branch-details li img {
+    border-radius: 50%;
+    height: 150px;
+    width: auto;
+    padding: 15px 37%;
+}
+
+.branch-details .branch-name {
+    padding-left: 33.33%;
+    position: relative;
+    color: rgb(243, 122, 23);
+}
+
+.branch-name span {
+    position: absolute;
+    top: 10%;
+    left: 42%;
+    font-size: 150%;
+    font-weight: bold;
+}
+
+.branch-details p {
+    padding-top: 50px;
+    font-size: 150%;
+}
+
+.logo-big {
+    font-size: 200%;
+}
+
+/* --------------- CONTACT US --------------- */
+
+.section-contact {
+
+}
+
+.page-head {
+    background-color: rgb(191, 212, 191);
+    background-size: cover;    
+    line-height: 195%;
+    padding: 20px 10px ;
+    margin-bottom: 80px;
+}
+
+.page-head p {
+    font-size: 140%;
+    font-weight: 600;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+    color: #070b49;
+    padding: 30px;
+    text-align: center;
+}
+
+.section-contactus .contact {
+    font-size: 120%;
+}
+
+.section-contactus .box {
+    border: 1px solid gold;
+    background-color: rgb(12, 248, 52);
+    padding: 10px 1%;
+    margin-left: 10px ;
+    margin-bottom: 50px;
+    z-index: 10;
+    box-shadow: 2px 2px 2px 5px #294d35;
+
+}
+
+.section-contactus .center {
+    text-align: center;
+    padding-bottom: 12px;
+}
+
+.section-contactus .row {
+    padding-bottom: 5px;
+}
+
+.section-contactus .firstname {
+    float: left;
+    margin-left: 31%; 
+    width: 67%;
+}
+
+.section-contactus .lastname {
+    float: left;
+    margin-left: 0%;
+    width: 62%;
+}
+
+.section-contactus input{
+    width: 50%;
+    margin-left: 23%;
+}
+
+.section-contactus input[type=email] {
+    margin-left: 23%; 
+    width: 100%;    
+}
+
+.section-contactus select {
+    margin-left: 23%;
+}
+
+.section-contactus textarea {
+    margin-left: 23%;
+}
+
+.section-contactus .btn-primary {
+    margin-left: 23%;
+    width: 100%;
+    height: 40px;
+}
+
+
+/* ---------------- ABOUT US ----------------- */
+
+.section-aboutus {
+
+}
+
+.section-aboutus img {
+    height: 120px;
+    width: 100%;
+}
+
+#wedo {
+    font-size: 150%;
+    font-weight: bold;
+    background-color: cadetblue;
+    color: #070b49;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* ------------------ SECTION-PARTATION ------------- */
+
+.section-partation ul{
+    margin: 50px 24%;
+}
+
+.section-partation li {
+    background-color: rgb(185, 185, 190);
+    display: inline;
+    font-size: 190%;
+    font-weight: bold
+}
+
+.section-partation a{
+    text-decoration: none;
+    color: rgb(17, 4, 194);
+    padding: 0px 17% ;
+}
+
+.section-partation
+ li:hover,
+ li:active {
+    background-color: #1547dde1;
+}
+
+.section-partation 
+li:link,
+li:visited {
+    background-color:#404868e1 ;
+}
+
+
+/* ------------ SIGN UP ----------------- */
+
+.section-signin {
+    margin: 20px 0;
+    box-shadow: 2px 2px 50px 10px rgb(25, 133, 4) inset;
+    display: block;
+}
+
+.signin-box {
+    height: 300px;
+    width: 45%;
+}
+
+.section-signin img {
+    margin-left:20%;
+    padding: 0;
+    height: 250px;
+}
+
+.section-signin .loginError {
+    display: none;
+    color: white;
+    background-color: red;
+    border: 1px solid red;
+    padding: 10px 15px;
+    text-align: center;
+}
+
+.section-signin div{
+    padding: 0px;
+    margin: 8px auto;
+}
+
+.section-signin label {
+    font-size: 130%;
+    font-weight: bold;
+    margin-right: 15%;
+    line-height: 171%;
+}
+
+.section-signin input[type=text] {
+    width: 80%;
+}
+
+.section-signin a{
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.section-signin input[type=checkbox] {
+    margin-top: 0;
+    padding-top: 5px;
+}
+
+.section-signin a{
+    margin-right: 20%;
+    float: right;
+}
+
+.section-signup {
+    box-shadow: 10px 10px 500px  #eeeeee inset;
+}
+
+.section-signup img {
+    height: 300px;
+    width: 80%;
+}
+
+.section-signup  {
+    display: none;
+}
+
+.signup-box {
+    height: 550px;
+    width: 45%;
+}
+
